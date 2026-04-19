@@ -3,113 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventure Seekers | Global Property Portal</title>
+    <title>Adventure Seekers Rentals | Luxury Property Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap');
+        body { background-color: #fcfcfc; color: #1a1a1a; font-family: 'Helvetica Neue', sans-serif; }
+        .gold-text { color: #b8860b; }
+        .gold-bg { background-color: #b8860b; }
+        .card { background: white; border: 1px solid #eee; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .card:hover { transform: translateY(-5px); border-color: #b8860b; }
         
-        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
-        .serif { font-family: 'Playfair Display', serif; }
-        .gold-accent { color: #D4AF37; }
-        .gold-bg { background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); }
-        .glass-card { background: rgba(20, 20, 20, 0.6); border: 1px solid rgba(212, 175, 55, 0.1); transition: all 0.4s ease; }
-        .glass-card:hover { border-color: #D4AF37; transform: translateY(-8px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .nav-blur { backdrop-filter: blur(10px); background: rgba(0,0,0,0.8); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+        .floating-whatsapp:hover { transform: scale(1.1); background-color: #128c7e; }
     </style>
 </head>
 <body>
 
-    <nav class="nav-blur p-5 flex justify-between items-center sticky top-0 z-50">
-        <h1 class="text-xl font-bold tracking-[0.2em] gold-accent serif italic">ADVENTURE SEEKERS</h1>
-        <div class="text-[10px] uppercase tracking-[0.3em] font-semibold hidden md:block">
-            <span class="px-4">Europe</span> <span class="px-4">UK</span> <span class="px-4">Global</span>
+    <a href="https://wa.me/YOUR_NUMBER" class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav class="p-6 bg-white border-b border-gray-100 flex justify-between items-center sticky top-0 z-50">
+        <h1 class="text-2xl font-bold gold-text tracking-tighter italic">ADVENTURE SEEKERS</h1>
+        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-bold">
+            <a href="#" class="hover:text-yellow-700">Europe</a>
+            <a href="#" class="hover:text-yellow-700">UK</a>
+            <a href="#" class="hover:text-yellow-700">USA</a>
         </div>
     </nav>
 
-    <header class="relative py-24 px-6 text-center overflow-hidden">
-        <div class="relative z-10">
-            <h2 class="text-5xl md:text-8xl font-bold serif mb-6 leading-tight">Elite <span class="gold-accent italic">European</span><br>Residences</h2>
-            <p class="text-zinc-400 text-sm md:text-base max-w-xl mx-auto font-light tracking-wide">Curated 1, 2, and 3 bedroom luxury stays with premium kitchen and ensuite facilities across the continent's most prestigious locations.</p>
-        </div>
+    <header class="py-20 px-6 text-center bg-gray-50">
+        <h2 class="text-5xl font-light mb-4 text-gray-800">Elite <span class="gold-text font-bold italic">European</span> Collection</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto uppercase tracking-widest text-xs">Premium 1, 2, & 3 Bedroom Residential Options</p>
     </header>
 
-    <section class="max-w-7xl mx-auto px-6 pb-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             
-            <div class="glass-card rounded-sm overflow-hidden group">
-                <div class="relative h-64 bg-zinc-900 flex items-center justify-center border-b border-zinc-800">
-                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase">Gallery View - Paris</span>
-                </div>
+            <div class="card rounded-lg overflow-hidden">
+                <div class="h-56 bg-gray-200 flex items-center justify-center italic text-gray-400">Exterior View - Paris</div>
                 <div class="p-8">
-                    <div class="flex justify-between items-end mb-4">
-                        <div>
-                            <p class="text-[10px] gold-accent uppercase tracking-widest mb-1">France</p>
-                            <h4 class="text-2xl serif">Le Marais Suite</h4>
-                        </div>
-                        <p class="text-lg font-semibold">€1,950<span class="text-[10px] text-zinc-500 block">per month</span></p>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="gold-text text-xs font-bold uppercase tracking-widest">France</span>
+                        <span class="text-lg font-bold">€2,100<small class="text-xs text-gray-400">/mo</small></span>
                     </div>
-                    <div class="flex gap-4 mb-6 text-[11px] text-zinc-400 uppercase tracking-tighter">
-                        <span><i class="fa-solid fa-bed gold-accent mr-1"></i> 1 Bed</span>
-                        <span><i class="fa-solid fa-utensils gold-accent mr-1"></i> Kitchen</span>
-                        <span><i class="fa-solid fa-bath gold-accent mr-1"></i> 1 Toilet</span>
+                    <h4 class="text-xl font-bold mb-3">Le Marais Executive</h4>
+                    <p class="text-gray-500 text-sm mb-6">Fully furnished luxury residence in the historic district.</p>
+                    
+                    <div class="grid grid-cols-2 gap-y-3 text-xs text-gray-600 font-medium border-t border-b border-gray-50 py-4 mb-6">
+                        <span><i class="fa fa-bed gold-text mr-2"></i> 1 Bedroom</span>
+                        <span><i class="fa fa-sink gold-text mr-2"></i> Full Kitchen</span>
+                        <span><i class="fa fa-toilet gold-text mr-2"></i> 1 Toilet</span>
+                        <span><i class="fa fa-wifi gold-text mr-2"></i> High-Speed</span>
                     </div>
-                    <button class="w-full py-4 bg-transparent border border-zinc-700 text-[11px] tracking-[0.3em] font-bold uppercase hover:bg-white hover:text-black transition-all">See Options</button>
+                    
+                    <button class="w-full py-3 bg-black text-white text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition">See Options</button>
                 </div>
             </div>
 
-            <div class="glass-card rounded-sm overflow-hidden group">
-                <div class="relative h-64 bg-zinc-900 flex items-center justify-center border-b border-zinc-800">
-                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase">Gallery View - Florence</span>
-                </div>
+            <div class="card rounded-lg overflow-hidden">
+                <div class="h-56 bg-gray-200 flex items-center justify-center italic text-gray-400">Exterior View - Florence</div>
                 <div class="p-8">
-                    <div class="flex justify-between items-end mb-4">
-                        <div>
-                            <p class="text-[10px] gold-accent uppercase tracking-widest mb-1">Italy</p>
-                            <h4 class="text-2xl serif">Tuscan Terrace</h4>
-                        </div>
-                        <p class="text-lg font-semibold">€3,400<span class="text-[10px] text-zinc-500 block">per month</span></p>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="gold-text text-xs font-bold uppercase tracking-widest">Italy</span>
+                        <span class="text-lg font-bold">€3,500<small class="text-xs text-gray-400">/mo</small></span>
                     </div>
-                    <div class="flex gap-4 mb-6 text-[11px] text-zinc-400 uppercase tracking-tighter">
-                        <span><i class="fa-solid fa-bed gold-accent mr-1"></i> 2 Bed</span>
-                        <span><i class="fa-solid fa-utensils gold-accent mr-1"></i> Full Kitchen</span>
-                        <span><i class="fa-solid fa-bath gold-accent mr-1"></i> 2 Toilet</span>
+                    <h4 class="text-xl font-bold mb-3">Tuscan Sun Suite</h4>
+                    <p class="text-gray-500 text-sm mb-6">Spacious family-sized villa with modern European finishings.</p>
+                    
+                    <div class="grid grid-cols-2 gap-y-3 text-xs text-gray-600 font-medium border-t border-b border-gray-50 py-4 mb-6">
+                        <span><i class="fa fa-bed gold-text mr-2"></i> 2 Bedrooms</span>
+                        <span><i class="fa fa-sink gold-text mr-2"></i> Chef's Kitchen</span>
+                        <span><i class="fa fa-toilet gold-text mr-2"></i> 2 Toilets</span>
+                        <span><i class="fa fa-parking gold-text mr-2"></i> Private Parking</span>
                     </div>
-                    <button class="w-full py-4 bg-transparent border border-zinc-700 text-[11px] tracking-[0.3em] font-bold uppercase hover:bg-white hover:text-black transition-all">See Options</button>
+                    
+                    <button class="w-full py-3 bg-black text-white text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition">See Options</button>
                 </div>
             </div>
 
-            <div class="glass-card rounded-sm overflow-hidden group">
-                <div class="relative h-64 bg-zinc-900 flex items-center justify-center border-b border-zinc-800">
-                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase">Gallery View - Santorini</span>
-                </div>
+            <div class="card rounded-lg overflow-hidden">
+                <div class="h-56 bg-gray-200 flex items-center justify-center italic text-gray-400">Exterior View - Santorini</div>
                 <div class="p-8">
-                    <div class="flex justify-between items-end mb-4">
-                        <div>
-                            <p class="text-[10px] gold-accent uppercase tracking-widest mb-1">Greece</p>
-                            <h4 class="text-2xl serif">Oia Estate</h4>
-                        </div>
-                        <p class="text-lg font-semibold">€5,800<span class="text-[10px] text-zinc-500 block">per month</span></p>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="gold-text text-xs font-bold uppercase tracking-widest">Greece</span>
+                        <span class="text-lg font-bold">€5,200<small class="text-xs text-gray-400">/mo</small></span>
                     </div>
-                    <div class="flex gap-4 mb-6 text-[11px] text-zinc-400 uppercase tracking-tighter">
-                        <span><i class="fa-solid fa-bed gold-accent mr-1"></i> 3 Bed</span>
-                        <span><i class="fa-solid fa-utensils gold-accent mr-1"></i> Chef's Kitchen</span>
-                        <span><i class="fa-solid fa-bath gold-accent mr-1"></i> 3 Toilet</span>
+                    <h4 class="text-xl font-bold mb-3">Oia Blue Estate</h4>
+                    <p class="text-gray-500 text-sm mb-6">Premier 3-bedroom estate with exclusive architectural design.</p>
+                    
+                    <div class="grid grid-cols-2 gap-y-3 text-xs text-gray-600 font-medium border-t border-b border-gray-50 py-4 mb-6">
+                        <span><i class="fa fa-bed gold-text mr-2"></i> 3 Bedrooms</span>
+                        <span><i class="fa fa-sink gold-text mr-2"></i> Full Kitchen</span>
+                        <span><i class="fa fa-toilet gold-text mr-2"></i> 3 Toilets</span>
+                        <span><i class="fa fa-swimming-pool gold-text mr-2"></i> Pool Access</span>
                     </div>
-                    <button class="w-full py-4 bg-transparent border border-zinc-700 text-[11px] tracking-[0.3em] font-bold uppercase hover:bg-white hover:text-black transition-all">See Options</button>
+                    
+                    <button class="w-full py-3 bg-black text-white text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition">See Options</button>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <footer class="bg-[#0a0a0a] py-20 px-6 border-t border-zinc-900 text-center">
-        <h3 class="serif text-3xl mb-4 italic gold-accent">Personalized Consultations</h3>
-        <p class="text-zinc-500 text-sm mb-10 tracking-widest uppercase">Request floor plans and exclusive availability</p>
-        <a href="https://wa.me/YOUR_NUMBER" class="gold-bg text-black px-12 py-5 font-bold text-xs tracking-[0.3em] uppercase inline-block shadow-lg hover:opacity-90 transition-opacity">
-            Connect via WhatsApp
-        </a>
-        <p class="mt-16 text-[10px] text-zinc-700 tracking-[0.5em] uppercase">&copy; 2026 Adventure Seekers Rentals</p>
+    <footer class="py-20 bg-gray-50 border-t border-gray-100 text-center">
+        <p class="text-[10px] uppercase tracking-[0.4em] text-gray-400 mb-4">Adventure Seekers Global</p>
+        <p class="text-xs text-gray-600 italic">"Quality Living, Everywhere."</p>
     </footer>
 
 </body>
