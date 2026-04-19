@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiftgo Properties | Luxury Real Estate</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --black: #1a1a1a;
+            --white: #ffffff;
+        }
+        body { font-family: 'Georgia', serif; margin: 0; background: #f9f9f9; color: var(--black); }
+        
+        header { background: var(--black); color: var(--gold); padding: 40px 20px; text-align: center; border-bottom: 4px solid var(--gold); }
+        header h1 { margin: 0; letter-spacing: 3px; text-transform: uppercase; }
+        
+        .container { max-width: 1000px; margin: 20px auto; padding: 20px; }
+        
+        .search-area { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; margin-bottom: 30px; }
+        input { width: 80%; padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; }
+
+        #property-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        
+        .house-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid var(--gold); }
+        .house-info { padding: 20px; }
+        .price { color: var(--gold); font-size: 22px; font-weight: bold; }
+        .location { color: #666; font-style: italic; }
+        
+        .btn { display: block; background: var(--black); color: var(--gold); text-align: center; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 15px; border: 1px solid var(--gold); }
+        .btn:hover { background: var(--gold); color: var(--black); }
+
+        footer { text-align: center; padding: 40px; background: var(--black); color: white; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SWIFTGO PROPERTIES</h1>
+    <p>Premium Real Estate & House Agency</p>
+</header>
+
+<div class="container">
+    <div class="search-area">
+        <h3>Find Your Next Home</h3>
+        <input type="text" id="searchInput" placeholder="Search by location (e.g. Lekki)..." onkeyup="searchHouses()">
+    </div>
+
+    <div id="property-list">
+        <p style="text-align:center;">Loading latest listings...</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Swiftgo Properties. All Rights Reserved.</p>
+    <p>Contact us via the property links for viewings.</p>
+</footer>
+
+<script>
+    // REPLACE THIS LINK with your "Anyone with link" CSV URL from the new Google Sheet
+    const sheetUrl = 'https://docs.google.com/spreadsheets/d/YOUR_NEW_SHEET_ID_HERE/gviz/tq?tqx=out:csv';
+
+    async function loadHouses() {
+        try {
+            const res = await fetch(sheetUrl);
+            const data = await res.text();
+            const rows = data.split('\n').slice(1);
+            const list = document.getElementById('property-list');
+            list.innerHTML = '';
+
+            rows.forEach(row => {
+                const cols = row.split(',').map(c => c.replace(/"/g, '').trim());
+                if(cols[0]) {
+                    const card = `
+                        <div class="house-card">
+                            <div class="house-info">
+                                <h3>${cols[1]}</h3>
+                                <p class="location">📍 ${cols[2]}</p>
+                                <p class="price">${cols[3]}</p>
+                                <p>Ref ID: ${cols[0]}</p>
+                                <a href="https://wa.me/447478710824?text=I am interested in Property ${cols[0]} - ${cols[1]}" class="btn" target="_blank">BOOK INSPECTION</a>
+                            </div>
+                        </div>`;
+                    list.innerHTML += card;
+                }
+            });
+        } catch(e) {
+            document.getElementById('property-list').innerHTML = "Check back soon for new listings!";
+        }
+    }
+
+    function searchHouses() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let cards = document.getElementsByClassName('house-card');
+        for (let i = 0; i < cards.length; i++) {
+            let text = cards[i].innerText.toLowerCase();
+            cards[i].style.display = text.includes(input) ? "" : "none";
+        }
+    }
+
+    loadHouses();
+</script>
+
+</body>
+</html>
