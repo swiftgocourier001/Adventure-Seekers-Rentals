@@ -13,6 +13,7 @@
         .btn-brand { background-color: #0a254d; color: white; transition: 0.3s; }
         .btn-brand:hover { background-color: #1c4a8a; transform: translateY(-2px); }
         
+        /* Floating WhatsApp Icon */
         .whatsapp-float { 
             position: fixed; bottom: 25px; right: 25px; 
             background-color: #25d366; color: white; 
@@ -22,9 +23,9 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
             transition: 0.3s;
         }
-        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
+        .whatsapp-float:hover { transform: scale(1.1); }
         
-        .property-card { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #edf2f7; transition: 0.3s; height: 100%; display: flex; flex-direction: column; }
+        .property-card { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #edf2f7; transition: 0.3s; }
         .property-card:hover { transform: translateY(-10px); border-color: #0a254d; }
     </style>
 </head>
@@ -44,138 +45,111 @@
             <h2 class="text-2xl font-bold text-brand mb-4">Global Search Portal</h2>
             <p class="text-gray-400 text-xs mb-8 uppercase tracking-widest">Premium 1, 2, & 3 Bedroom Options</p>
             <input type="text" placeholder="Search by City or Country..." class="w-full px-6 py-4 bg-gray-50 border border-gray-100 rounded-2xl mb-4 outline-none focus:border-blue-900 transition">
-            <button class="w-full btn-brand py-4 rounded-2xl font-bold text-lg">VIEW CURRENT AVAILABILITY</button>
+            <button class="w-full btn-brand py-4 rounded-2xl font-bold text-lg">VIEW AVAILABILITY</button>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-20">
+    <section class="max-w-5xl mx-auto px-6 py-20 text-center">
+        <h3 class="text-xs font-bold text-blue-800 uppercase tracking-[0.3em] mb-4">Welcome to Excellence</h3>
+        <h2 class="text-3xl md:text-4xl font-bold text-brand mb-8">Redefining Global Living</h2>
+        <p class="text-gray-600 leading-relaxed mb-12 text-lg">
+            At <strong>Adventure Seekers Rentals</strong>, we bridge the gap between world-class logistics and luxury living. Whether you are a corporate professional, a digital nomad, or a family exploring new horizons, we provide hand-picked residences that combine the comfort of home with the standards of a 5-star hotel.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <div class="p-8 bg-white rounded-3xl shadow-sm border border-gray-50">
+                <i class="fa fa-gem text-3xl text-blue-900 mb-6"></i>
+                <h4 class="font-bold text-brand mb-3 uppercase text-sm tracking-widest">Curated Luxury</h4>
+                <p class="text-xs text-gray-500 leading-loose">Every property in our portfolio is personally inspected to meet our strict standards for design and comfort.</p>
+            </div>
+            <div class="p-8 bg-white rounded-3xl shadow-sm border border-gray-50">
+                <i class="fa fa-globe-europe text-3xl text-blue-900 mb-6"></i>
+                <h4 class="font-bold text-brand mb-3 uppercase text-sm tracking-widest">Global Reach</h4>
+                <p class="text-xs text-gray-500 leading-loose">With a presence in over 15 countries, we manage the logistics of your move so you can focus on the adventure.</p>
+            </div>
+            <div class="p-8 bg-white rounded-3xl shadow-sm border border-gray-50">
+                <i class="fa fa-concierge-bell text-3xl text-blue-900 mb-6"></i>
+                <h4 class="font-bold text-brand mb-3 uppercase text-sm tracking-widest">24/7 Support</h4>
+                <p class="text-xs text-gray-500 leading-loose">Our dedicated concierge team is available around the clock to assist with your residential needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-10">
+        <div class="flex items-center mb-12">
+            <div class="h-[2px] flex-grow bg-gray-200"></div>
+            <h3 class="px-6 text-xs font-bold text-gray-400 uppercase tracking-[0.4em]">Featured Residences</h3>
+            <div class="h-[2px] flex-grow bg-gray-200"></div>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            
             <div class="property-card">
-                <div class="h-52 bg-zinc-200 flex items-center justify-center italic text-zinc-400">Luxury Exterior - Paris</div>
-                <div class="p-8 flex-grow flex flex-col">
+                <div class="h-52 bg-zinc-200 flex items-center justify-center italic text-zinc-400">Exterior View - Paris</div>
+                <div class="p-8">
                     <div class="flex justify-between items-center mb-4">
                         <span class="text-xs font-bold text-blue-800 uppercase tracking-widest">France</span>
                         <span class="text-xl font-bold text-brand">€2,600<small class="text-xs text-gray-400">/mo</small></span>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Le Marais Historic Suite</h4>
-                    <p class="text-gray-500 text-sm mb-6 flex-grow">A sophisticated 1-bedroom residence featuring classic French architecture with modern interior upgrades. Located in the vibrant heart of the 4th arrondissement.</p>
-                    <div class="grid grid-cols-2 gap-4 text-xs text-gray-600 mb-8 font-semibold border-t border-b border-gray-50 py-4">
-                        <span><i class="fa fa-bed mr-2 text-brand"></i> 1 Bedroom</span>
-                        <span><i class="fa fa-utensils mr-2 text-brand"></i> Kitchen</span>
-                        <span><i class="fa fa-toilet mr-2 text-brand"></i> 1 Toilet</span>
-                        <span><i class="fa fa-wifi mr-2 text-brand"></i> Fiber Optic</span>
+                    <p class="text-gray-500 text-xs mb-6 leading-relaxed">A sophisticated 1-bedroom residence featuring classic French architecture with modern interior upgrades.</p>
+                    <div class="grid grid-cols-2 gap-4 text-[10px] text-gray-600 mb-8 font-bold border-t border-gray-50 pt-4">
+                        <span><i class="fa fa-bed mr-2 text-brand"></i> 1 BEDROOM</span>
+                        <span><i class="fa fa-utensils mr-2 text-brand"></i> KITCHEN</span>
+                        <span><i class="fa fa-toilet mr-2 text-brand"></i> 1 TOILET</span>
+                        <span><i class="fa fa-wifi mr-2 text-brand"></i> FIBER WIFI</span>
                     </div>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase tracking-widest hover:bg-blue-900 hover:text-white transition">See Options</button>
+                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-[10px] uppercase tracking-widest hover:bg-blue-900 hover:text-white transition">See Options</button>
                 </div>
             </div>
 
             <div class="property-card">
-                <div class="h-52 bg-zinc-200 flex items-center justify-center italic text-zinc-400">Luxury Exterior - Florence</div>
-                <div class="p-8 flex-grow flex flex-col">
+                <div class="h-52 bg-zinc-200 flex items-center justify-center italic text-zinc-400">Exterior View - Florence</div>
+                <div class="p-8">
                     <div class="flex justify-between items-center mb-4">
                         <span class="text-xs font-bold text-blue-800 uppercase tracking-widest">Italy</span>
                         <span class="text-xl font-bold text-brand">€3,900<small class="text-xs text-gray-400">/mo</small></span>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Tuscan Sun Terrace</h4>
-                    <p class="text-gray-500 text-sm mb-6 flex-grow">Experience breathtaking views with this 2-bedroom villa. Features a sprawling private terrace and an authentic Italian chef's kitchen for the ultimate stay.</p>
-                    <div class="grid grid-cols-2 gap-4 text-xs text-gray-600 mb-8 font-semibold border-t border-b border-gray-50 py-4">
-                        <span><i class="fa fa-bed mr-2 text-brand"></i> 2 Bedrooms</span>
-                        <span><i class="fa fa-utensils mr-2 text-brand"></i> Full Kitchen</span>
-                        <span><i class="fa fa-toilet mr-2 text-brand"></i> 2 Toilets</span>
-                        <span><i class="fa fa-parking mr-2 text-brand"></i> Private Garage</span>
+                    <p class="text-gray-500 text-xs mb-6 leading-relaxed">Spacious 2-bedroom villa with a private terrace overlooking the historic hills of Florence.</p>
+                    <div class="grid grid-cols-2 gap-4 text-[10px] text-gray-600 mb-8 font-bold border-t border-gray-50 pt-4">
+                        <span><i class="fa fa-bed mr-2 text-brand"></i> 2 BEDROOMS</span>
+                        <span><i class="fa fa-utensils mr-2 text-brand"></i> FULL KITCHEN</span>
+                        <span><i class="fa fa-toilet mr-2 text-brand"></i> 2 TOILETS</span>
+                        <span><i class="fa fa-parking mr-2 text-brand"></i> PARKING</span>
                     </div>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase tracking-widest hover:bg-blue-900 hover:text-white transition">See Options</button>
+                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-[10px] uppercase tracking-widest hover:bg-blue-900 hover:text-white transition">See Options</button>
                 </div>
             </div>
 
             <div class="property-card">
-                <div class="h-52 bg-zinc-200 flex items-center justify-center italic text-zinc-400">Luxury Exterior - Berlin</div>
-                <div class="p-8 flex-grow flex flex-col">
+                <div class="h-52 bg-zinc-200 flex items-center justify-center italic text-zinc-400">Exterior View - Berlin</div>
+                <div class="p-8">
                     <div class="flex justify-between items-center mb-4">
                         <span class="text-xs font-bold text-blue-800 uppercase tracking-widest">Germany</span>
                         <span class="text-xl font-bold text-brand">€5,400<small class="text-xs text-gray-400">/mo</small></span>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Berlin Skyline Penthouse</h4>
-                    <p class="text-gray-500 text-sm mb-6 flex-grow">Our premier 3-bedroom executive penthouse. Includes 24/7 concierge service, floor-to-ceiling windows, and high-end security for business travelers.</p>
-                    <div class="grid grid-cols-2 gap-4 text-xs text-gray-600 mb-8 font-semibold border-t border-b border-gray-50 py-4">
-                        <span><i class="fa fa-bed mr-2 text-brand"></i> 3 Bedrooms</span>
-                        <span><i class="fa fa-utensils mr-2 text-brand"></i> Pro Kitchen</span>
-                        <span><i class="fa fa-toilet mr-2 text-brand"></i> 3 Toilets</span>
-                        <span><i class="fa fa-shield-alt mr-2 text-brand"></i> Security</span>
+                    <p class="text-gray-500 text-xs mb-6 leading-relaxed">Our premier 3-bedroom executive penthouse with 24/7 security and floor-to-ceiling windows.</p>
+                    <div class="grid grid-cols-2 gap-4 text-[10px] text-gray-600 mb-8 font-bold border-t border-gray-50 pt-4">
+                        <span><i class="fa fa-bed mr-2 text-brand"></i> 3 BEDROOMS</span>
+                        <span><i class="fa fa-utensils mr-2 text-brand"></i> PRO KITCHEN</span>
+                        <span><i class="fa fa-toilet mr-2 text-brand"></i> 3 TOILETS</span>
+                        <span><i class="fa fa-shield-alt mr-2 text-brand"></i> SECURITY</span>
                     </div>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase tracking-widest hover:bg-blue-900 hover:text-white transition">See Options</button>
+                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-[10px] uppercase tracking-widest hover:bg-blue-900 hover:text-white transition">See Options</button>
                 </div>
             </div>
-
-            <div class="property-card">
-                <div class="h-52 bg-zinc-200 flex items-center justify-center italic text-zinc-400">Luxury Exterior - London</div>
-                <div class="p-8 flex-grow flex flex-col">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-xs font-bold text-blue-800 uppercase tracking-widest">United Kingdom</span>
-                        <span class="text-xl font-bold text-brand">£3,100<small class="text-xs text-gray-400">/mo</small></span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3">Mayfair Regency Flat</h4>
-                    <p class="text-gray-500 text-sm mb-6 flex-grow">Elegant 2-bedroom apartment in London's most prestigious district. Perfect for long-term luxury stays with top-tier amenities and transport links.</p>
-                    <div class="grid grid-cols-2 gap-4 text-xs text-gray-600 mb-8 font-semibold border-t border-b border-gray-50 py-4">
-                        <span><i class="fa fa-bed mr-2 text-brand"></i> 2 Bedrooms</span>
-                        <span><i class="fa fa-utensils mr-2 text-brand"></i> Modern Kitchen</span>
-                        <span><i class="fa fa-toilet mr-2 text-brand"></i> 1.5 Toilets</span>
-                        <span><i class="fa fa-train mr-2 text-brand"></i> Central Zone</span>
-                    </div>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase tracking-widest hover:bg-blue-900 hover:text-white transition">See Options</button>
-                </div>
-            </div>
-
-            <div class="property-card">
-                <div class="h-52 bg-zinc-200 flex items-center justify-center italic text-zinc-400">Luxury Exterior - New York</div>
-                <div class="p-8 flex-grow flex flex-col">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-xs font-bold text-blue-800 uppercase tracking-widest">USA</span>
-                        <span class="text-xl font-bold text-brand">$6,200<small class="text-xs text-gray-400">/mo</small></span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3">Manhattan Heights Loft</h4>
-                    <p class="text-gray-500 text-sm mb-6 flex-grow">Industrial-chic 1-bedroom loft in Lower Manhattan. Open-concept living space with high ceilings and a gourmet kitchen setup.</p>
-                    <div class="grid grid-cols-2 gap-4 text-xs text-gray-600 mb-8 font-semibold border-t border-b border-gray-50 py-4">
-                        <span><i class="fa fa-bed mr-2 text-brand"></i> 1 Bedroom</span>
-                        <span><i class="fa fa-utensils mr-2 text-brand"></i> Loft Kitchen</span>
-                        <span><i class="fa fa-toilet mr-2 text-brand"></i> 1 Toilet</span>
-                        <span><i class="fa fa-dumbbell mr-2 text-brand"></i> Gym Access</span>
-                    </div>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase tracking-widest hover:bg-blue-900 hover:text-white transition">See Options</button>
-                </div>
-            </div>
-
-            <div class="property-card">
-                <div class="h-52 bg-zinc-200 flex items-center justify-center italic text-zinc-400">Luxury Exterior - Finland</div>
-                <div class="p-8 flex-grow flex flex-col">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-xs font-bold text-blue-800 uppercase tracking-widest">Finland</span>
-                        <span class="text-xl font-bold text-brand">€2,900<small class="text-xs text-gray-400">/mo</small></span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3">Helsinki Nordic Retreat</h4>
-                    <p class="text-gray-500 text-sm mb-6 flex-grow">Minimalist 2-bedroom residence focusing on comfort and light. Features a traditional private sauna and state-of-the-art kitchen facilities.</p>
-                    <div class="grid grid-cols-2 gap-4 text-xs text-gray-600 mb-8 font-semibold border-t border-b border-gray-50 py-4">
-                        <span><i class="fa fa-bed mr-2 text-brand"></i> 2 Bedrooms</span>
-                        <span><i class="fa fa-utensils mr-2 text-brand"></i> Kitchen</span>
-                        <span><i class="fa fa-toilet mr-2 text-brand"></i> 2 Toilets</span>
-                        <span><i class="fa fa-fire mr-2 text-brand"></i> Sauna Area</span>
-                    </div>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase tracking-widest hover:bg-blue-900 hover:text-white transition">See Options</button>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <footer class="bg-gray-50 py-20 text-center border-t border-gray-200">
-        <p class="text-[10px] uppercase tracking-[0.5em] text-gray-400 mb-4 font-bold">Adventure Seekers Global</p>
-        <p class="text-xs text-gray-500 italic mb-8">"Quality Global Living, Delivered by Experts."</p>
-        <div class="flex justify-center space-x-6 text-brand text-lg">
+    <footer class="bg-white py-20 text-center border-t border-gray-100">
+        <p class="text-[10px] uppercase tracking-[0.5em] text-gray-300 mb-6 font-bold">Adventure Seekers Global Residential</p>
+        <div class="flex justify-center space-x-8 text-brand text-lg mb-10">
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-instagram"></i>
             <i class="fab fa-linkedin-in"></i>
         </div>
+        <p class="text-[10px] text-gray-400 uppercase tracking-widest">&copy; 2026 Adventure Seekers Rentals. All Rights Reserved.</p>
     </footer>
 
 </body>
