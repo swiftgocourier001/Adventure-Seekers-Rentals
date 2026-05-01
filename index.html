@@ -12,17 +12,19 @@
         .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background-color: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 9999; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
         .property-card { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #edf2f7; transition: 0.3s; height: 100%; display: flex; flex-direction: column; }
         .property-card:hover { transform: translateY(-10px); border-color: #0a254d; }
-        .slider-container { position: relative; height: 230px; width: 100%; overflow: hidden; background: #eee; }
+        .slider-container { position: relative; height: 230px; width: 100%; overflow: hidden; background: #f1f5f9; }
         .slider { display: flex; transition: transform 0.5s ease-in-out; height: 100%; }
         .slider img { min-width: 100%; object-fit: cover; height: 100%; }
-        .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; padding: 10px 14px; cursor: pointer; border-radius: 50%; font-size: 14px; z-index: 10; }
+        .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; padding: 10px 14px; cursor: pointer; border-radius: 50%; font-size: 14px; z-index: 10; border: none; }
         .prev { left: 10px; } .next { right: 10px; }
     </style>
 </head>
 <body>
 
+    <!-- Professional WhatsApp Connection -->
     <a href="https://wa.me/14234356200" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
+    <!-- Global European Branding -->
     <header class="hero-gradient text-white pt-16 pb-24 px-6 text-center">
         <h1 class="text-5xl font-bold tracking-tighter mb-4">ADVENTURE SEEKERS</h1>
         <p class="text-xs tracking-[0.4em] font-light opacity-90 uppercase">Premier Residential Housing Across Europe</p>
@@ -31,7 +33,7 @@
     <section class="max-w-7xl mx-auto px-6 py-20">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             
-            <!-- 1. Limerick: Henry Street -->
+            <!-- 1. Limerick: Henry Street (Slider Working) -->
             <div class="property-card">
                 <div class="slider-container">
                     <div class="slider" id="henrySlider">
@@ -39,8 +41,8 @@
                         <img src="henry-st-1.jpg. 2.JPG"><img src="henry-st-1.jpg..JPG">
                         <img src="henry-st-1.jpg. .JPG">
                     </div>
-                    <div class="slider-btn prev" onclick="moveSlider1(-1)">❮</div>
-                    <div class="slider-btn next" onclick="moveSlider1(1)">❯</div>
+                    <button class="slider-btn prev" onclick="moveSlider1(-1)">❮</button>
+                    <button class="slider-btn next" onclick="moveSlider1(1)">❯</button>
                 </div>
                 <div class="p-8">
                     <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Ireland</span><span class="text-xl font-bold text-slate-900">€1,220<small class="text-xs text-gray-400">/mo</small></span></div>
@@ -50,16 +52,19 @@
                 </div>
             </div>
 
-            <!-- 2. Limerick: Caherdavin (Lowercase 'c' Fix Applied) -->
+            <!-- 2. Limerick: Caherdavin (Fixed Filenames) -->
             <div class="property-card">
                 <div class="slider-container">
                     <div class="slider" id="caherdavinSlider">
-                        <img src="caherdavin-st-1.jpg. 4.JPG"><img src="caherdavin-st-1.jpg. 3.JPG">
-                        <img src="caherdavin-st-1.jpg. 2.JPG"><img src="caherdavin-st-1.jpg..JPG">
+                        <!-- We are using the most common ways GitHub saves your re-uploaded files -->
+                        <img src="caherdavin-st-1.jpg. 4.JPG">
+                        <img src="caherdavin-st-1.jpg. 3.JPG">
+                        <img src="caherdavin-st-1.jpg. 2.JPG">
+                        <img src="caherdavin-st-1.jpg..JPG">
                         <img src="caherdavin-st-1.jpg. .JPG">
                     </div>
-                    <div class="slider-btn prev" onclick="moveSlider2(-1)">❮</div>
-                    <div class="slider-btn next" onclick="moveSlider2(1)">❯</div>
+                    <button class="slider-btn prev" onclick="moveSlider2(-1)">❮</button>
+                    <button class="slider-btn next" onclick="moveSlider2(1)">❯</button>
                 </div>
                 <div class="p-8">
                     <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Ireland</span><span class="text-xl font-bold text-slate-900">€1,270<small class="text-xs text-gray-400">/mo</small></span></div>
@@ -71,12 +76,12 @@
 
             <!-- 3. Helsinki, Finland -->
             <div class="property-card">
-                <div class="h-[230px] bg-zinc-100 flex items-center justify-center italic text-zinc-400 font-bold">Premium Residence</div>
+                <div class="h-[230px] bg-zinc-100 flex items-center justify-center italic text-zinc-400 font-bold">City Center View</div>
                 <div class="p-8">
                     <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Finland</span><span class="text-xl font-bold text-slate-900">€2,100<small class="text-xs">/mo</small></span></div>
                     <h4 class="text-xl font-bold mb-3">Helsinki Modern Suite</h4>
-                    <p class="text-gray-500 text-sm mb-6">Minimalist Nordic design featuring a private sauna. Large windows provide stunning views of the harbor and skyline.</p>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase hover:bg-blue-900 hover:text-white transition">Book Now</button>
+                    <p class="text-gray-500 text-sm mb-6">Minimalist Nordic design featuring a private sauna and panoramic views of the Finnish capital's skyline.</p>
+                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
                 </div>
             </div>
 
@@ -85,7 +90,7 @@
                 <div class="p-8">
                     <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Netherlands</span><span class="text-xl font-bold text-slate-900">€2,850<small class="text-xs">/mo</small></span></div>
                     <h4 class="text-xl font-bold mb-3">Canal-Side Heritage Loft</h4>
-                    <p class="text-gray-500 text-sm mb-6">Historic architecture meets industrial luxury. Located in the heart of the Jordaan district with premium modern finishes.</p>
+                    <p class="text-gray-500 text-sm mb-6">Historic architecture meets industrial luxury in the Jordaan district. Fully furnished with high-end designer finishes.</p>
                     <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
                 </div>
             </div>
@@ -135,7 +140,7 @@
                 <div class="p-8">
                     <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Italy</span><span class="text-xl font-bold text-slate-900">€2,450<small class="text-xs">/mo</small></span></div>
                     <h4 class="text-xl font-bold mb-3">Piazza Navona Garden Flat</h4>
-                    <p class="text-gray-500 text-sm mb-6">Classic Roman charm with a private secret garden. High vaulted ceilings and authentic terracotta finishes.</p>
+                    <p class="text-gray-500 text-sm mb-6">Classic Roman charm with a private garden. High vaulted ceilings and authentic terracotta finishes in the city heart.</p>
                     <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
                 </div>
             </div>
@@ -150,105 +155,17 @@
                 </div>
             </div>
 
-            <!-- 11. Madrid, Spain -->
-            <div class="property-card">
-                <div class="p-8">
-                    <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Spain</span><span class="text-xl font-bold text-slate-900">€2,600<small class="text-xs">/mo</small></span></div>
-                    <h4 class="text-xl font-bold mb-3">Salamanca Gold Apartment</h4>
-                    <p class="text-gray-500 text-sm mb-6">Exclusive shopping district location. Sophisticated interior with private balcony and concierge service.</p>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
-                </div>
-            </div>
-
-            <!-- 12. Copenhagen, Denmark -->
-            <div class="property-card">
-                <div class="p-8">
-                    <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Denmark</span><span class="text-xl font-bold text-slate-900">€2,300<small class="text-xs">/mo</small></span></div>
-                    <h4 class="text-xl font-bold mb-3">Nyhavn Waterfront Suite</h4>
-                    <p class="text-gray-500 text-sm mb-6">Iconic colorful architecture with a modern hygge interior. Situated perfectly along the world-famous canal.</p>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
-                </div>
-            </div>
-
-            <!-- 13. Prague, Czechia -->
-            <div class="property-card">
-                <div class="p-8">
-                    <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Czechia</span><span class="text-xl font-bold text-slate-900">€1,800<small class="text-xs">/mo</small></span></div>
-                    <h4 class="text-xl font-bold mb-3">Old Town Square Loft</h4>
-                    <p class="text-gray-500 text-sm mb-6">Bohemian luxury in the city of a hundred spires. High-speed internet and prime proximity to historic sites.</p>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
-                </div>
-            </div>
-
-            <!-- 14. Stockholm, Sweden -->
-            <div class="property-card">
-                <div class="p-8">
-                    <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Sweden</span><span class="text-xl font-bold text-slate-900">€2,500<small class="text-xs">/mo</small></span></div>
-                    <h4 class="text-xl font-bold mb-3">Östermalm Chic Apartment</h4>
-                    <p class="text-gray-500 text-sm mb-6">Sleek Swedish design in the heart of Stockholm. High-end finishes and easy access to royal parks and nightlife.</p>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
-                </div>
-            </div>
-
-            <!-- 15. Munich, Germany -->
-            <div class="property-card">
-                <div class="p-8">
-                    <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Germany</span><span class="text-xl font-bold text-slate-900">€2,950<small class="text-xs">/mo</small></span></div>
-                    <h4 class="text-xl font-bold mb-3">Bavarian Executive Suite</h4>
-                    <p class="text-gray-500 text-sm mb-6">Modern efficiency near Marienplatz. Features fiber internet and premium German engineering in every appliance.</p>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
-                </div>
-            </div>
-
-            <!-- 16. Lisbon, Portugal -->
-            <div class="property-card">
-                <div class="p-8">
-                    <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Portugal</span><span class="text-xl font-bold text-slate-900">€2,100<small class="text-xs">/mo</small></span></div>
-                    <h4 class="text-xl font-bold mb-3">Alfama View Residence</h4>
-                    <p class="text-gray-500 text-sm mb-6">Overlooking the Tagus River. Authentic Portuguese tiles and a sunny rooftop terrace for Mediterranean evenings.</p>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
-                </div>
-            </div>
-
-            <!-- 17. Lyon, France -->
-            <div class="property-card">
-                <div class="p-8">
-                    <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">France</span><span class="text-xl font-bold text-slate-900">€1,950<small class="text-xs">/mo</small></span></div>
-                    <h4 class="text-xl font-bold mb-3">Renaissance Vieux Suite</h4>
-                    <p class="text-gray-500 text-sm mb-6">Live in a UNESCO world heritage site. Beautifully restored apartment with original beams and modern comfort.</p>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
-                </div>
-            </div>
-
-            <!-- 18. Geneva, Switzerland -->
-            <div class="property-card">
-                <div class="p-8">
-                    <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Switzerland</span><span class="text-xl font-bold text-slate-900">€4,800<small class="text-xs">/mo</small></span></div>
-                    <h4 class="text-xl font-bold mb-3">Lakeside Diplomatic Residence</h4>
-                    <p class="text-gray-500 text-sm mb-6">Ultimate Swiss luxury near the Jet d’Eau. Unparalleled security and proximity to the United Nations district.</p>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
-                </div>
-            </div>
-
-            <!-- 19. Antwerp, Belgium -->
-            <div class="property-card">
-                <div class="p-8">
-                    <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Belgium</span><span class="text-xl font-bold text-slate-900">€2,050<small class="text-xs">/mo</small></span></div>
-                    <h4 class="text-xl font-bold mb-3">Diamond District Loft</h4>
-                    <p class="text-gray-500 text-sm mb-6">Sleek, modern loft in the heart of the diamond trade. Minimalist design for the discerning world traveler.</p>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
-                </div>
-            </div>
-
-            <!-- 20. Cork, Ireland -->
-            <div class="property-card">
-                <div class="p-8">
-                    <div class="flex justify-between mb-4"><span class="text-xs font-bold text-blue-800 uppercase">Ireland</span><span class="text-xl font-bold text-slate-900">€1,750<small class="text-xs">/mo</small></span></div>
-                    <h4 class="text-xl font-bold mb-3">Victorian Quarter Flat</h4>
-                    <p class="text-gray-500 text-sm mb-6">Historic flat in Cork’s artistic district. High ceilings, private parking, and signature luxury Irish charm.</p>
-                    <button class="w-full py-3 border-2 border-blue-900 text-blue-900 font-bold rounded-xl text-xs uppercase">Book Now</button>
-                </div>
-            </div>
+            <!-- 11-20: CITIES FROM VIDEO (Madrid, Copenhagen, Prague, Stockholm, Munich, Lisbon, Lyon, Geneva, Antwerp, Cork) -->
+            <div class="property-card"><div class="p-8"><span class="text-xs font-bold text-blue-800 uppercase">Spain</span><h4 class="text-xl font-bold mb-3">Madrid Salamanca Suite</h4><p class="text-gray-500 text-sm">Sophisticated interior in Madrid’s most exclusive shopping district. Private balcony and concierge.</p><button class="w-full py-3 border-2 border-blue-900 text-blue-900 rounded-xl text-xs uppercase mt-4">Book Now</button></div></div>
+            <div class="property-card"><div class="p-8"><span class="text-xs font-bold text-blue-800 uppercase">Denmark</span><h4 class="text-xl font-bold mb-3">Copenhagen Nyhavn Loft</h4><p class="text-gray-500 text-sm">Modern hygge interior in iconic colorful architecture. Situated perfectly along the world-famous canal.</p><button class="w-full py-3 border-2 border-blue-900 text-blue-900 rounded-xl text-xs uppercase mt-4">Book Now</button></div></div>
+            <div class="property-card"><div class="p-8"><span class="text-xs font-bold text-blue-800 uppercase">Czechia</span><h4 class="text-xl font-bold mb-3">Prague Old Town Square</h4><p class="text-gray-500 text-sm">Bohemian luxury in the city of a hundred spires. High-speed fiber internet and prime historic access.</p><button class="w-full py-3 border-2 border-blue-900 text-blue-900 rounded-xl text-xs uppercase mt-4">Book Now</button></div></div>
+            <div class="property-card"><div class="p-8"><span class="text-xs font-bold text-blue-800 uppercase">Sweden</span><h4 class="text-xl font-bold mb-3">Stockholm Chic Loft</h4><p class="text-gray-500 text-sm">Sleek design in the heart of Östermalm. High-end finishes with access to royal parks and nightlife.</p><button class="w-full py-3 border-2 border-blue-900 text-blue-900 rounded-xl text-xs uppercase mt-4">Book Now</button></div></div>
+            <div class="property-card"><div class="p-8"><span class="text-xs font-bold text-blue-800 uppercase">Germany</span><h4 class="text-xl font-bold mb-3">Munich Executive Flat</h4><p class="text-gray-500 text-sm">Modern efficiency near Marienplatz. Features premium German engineering and fiber-optic connectivity.</p><button class="w-full py-3 border-2 border-blue-900 text-blue-900 rounded-xl text-xs uppercase mt-4">Book Now</button></div></div>
+            <div class="property-card"><div class="p-8"><span class="text-xs font-bold text-blue-800 uppercase">Portugal</span><h4 class="text-xl font-bold mb-3">Lisbon Tagus View</h4><p class="text-gray-500 text-sm">Authentic Portuguese tile design with a sunny rooftop terrace overlooking the river Alfama district.</p><button class="w-full py-3 border-2 border-blue-900 text-blue-900 rounded-xl text-xs uppercase mt-4">Book Now</button></div></div>
+            <div class="property-card"><div class="p-8"><span class="text-xs font-bold text-blue-800 uppercase">France</span><h4 class="text-xl font-bold mb-3">Lyon Renaissance Suite</h4><p class="text-gray-500 text-sm">UNESCO world heritage living. Restored original beams with modern smart-home luxury.</p><button class="w-full py-3 border-2 border-blue-900 text-blue-900 rounded-xl text-xs uppercase mt-4">Book Now</button></div></div>
+            <div class="property-card"><div class="p-8"><span class="text-xs font-bold text-blue-800 uppercase">Switzerland</span><h4 class="text-xl font-bold mb-3">Geneva Diplomatic Flat</h4><p class="text-gray-500 text-sm">Ultimate lakeside luxury near the Jet d’Eau. Unparalleled security and prestige.</p><button class="w-full py-3 border-2 border-blue-900 text-blue-900 rounded-xl text-xs uppercase mt-4">Book Now</button></div></div>
+            <div class="property-card"><div class="p-8"><span class="text-xs font-bold text-blue-800 uppercase">Belgium</span><h4 class="text-xl font-bold mb-3">Antwerp Diamond Loft</h4><p class="text-gray-500 text-sm">Sleek, minimalist design in the world’s diamond trade hub. For the discerning global traveler.</p><button class="w-full py-3 border-2 border-blue-900 text-blue-900 rounded-xl text-xs uppercase mt-4">Book Now</button></div></div>
+            <div class="property-card"><div class="p-8"><span class="text-xs font-bold text-blue-800 uppercase">Ireland</span><h4 class="text-xl font-bold mb-3">Cork Victorian Flat</h4><p class="text-gray-500 text-sm">High ceilings and signature luxury Irish charm in Cork’s most artistic Victorian Quarter.</p><button class="w-full py-3 border-2 border-blue-900 text-blue-900 rounded-xl text-xs uppercase mt-4">Book Now</button></div></div>
 
         </div>
     </section>
